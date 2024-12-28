@@ -68,3 +68,7 @@ func (c *Client) Compute(hash []byte, height, nonce uint64) ([]byte, []byte, err
 
 	return mix, digest, nil
 }
+
+func (c *Client) GetDag() *dag.DAG {
+	return c.data
+}
